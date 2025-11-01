@@ -1,13 +1,14 @@
 #include <stdio.h>
 
 // Desafio de Xadrez - MateCheck
-// Nível Iniciante
+// Nível Aventureiro
 // Aluno: José Ageu Layme Neto.
 
 int main(){
 
     int b = 0; //contador do repedidor do movimento do bispo
     int r = 0; //contador do repedidor do movimento da rainha
+    int movimentoCompleto = 1; //flag para controlar o movimento em L do cavalo
 
     // mover a Torre 5 casas para a direita
     printf("Movimento da Torre:\n");
@@ -30,6 +31,18 @@ int main(){
         printf("Esquerda\n");
         r++;
     } while (r < 8);
+
+    // Mover o Cavalo duas casas para baixo e uma casa para a esquerda
+    printf("\n");
+    printf("Movimento do Cavalo:\n");
+    while (movimentoCompleto--){
+        for (int c = 0; c < 2; c++){
+            printf("Baixo\n");
+        }
+        printf("Esquerda\n");
+    }
+    
+
     
     return 0;
 }
